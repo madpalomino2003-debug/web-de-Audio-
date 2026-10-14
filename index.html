@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semáforo peatonal accesible con voz y sonido">
+    <title>Semáforo Accesible Multisensorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="marca">
+            <span class="icono-marca" aria-hidden="true">🚦</span>
+            <div>
+                <h1>Semáforo Accesible</h1>
+                <p>Una señal clara para todos</p>
+            </div>
+        </div>
+        <span class="etiqueta">PRÁCTICA DE LABORATORIO</span>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="introduccion">
+            <span class="sobrelinea">TECNOLOGÍA INCLUSIVA</span>
+            <h2>Un cruce más seguro para todos</h2>
+            <p>
+                Semáforo peatonal interactivo con señales visuales,
+                sonoras y mensajes de voz.
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="panel-cabecera">
+                <div>
+                    <h2>Semáforo peatonal</h2>
+                    <p>Presiona los botones para probarlo.</p>
+                </div>
+
+                <span class="indicador">
+                    <span class="punto"></span>
+                    Sistema interactivo
+                </span>
+            </div>
+
+            <div class="zona-semaforo">
+                <div class="semaforo" id="semaforo"
+                     role="img"
+                     aria-label="Semáforo en rojo. No cruzar.">
+
+                    <div class="luz luz-roja" id="luzRoja">
+                        <span class="figura" aria-hidden="true">✋</span>
+                    </div>
+
+                    <div class="luz luz-verde" id="luzVerde">
+                        <span class="figura" aria-hidden="true">🚶</span>
+                    </div>
+
+                </div>
+
+                <div class="soporte"></div>
+                <div class="base"></div>
+            </div>
+
+            <div class="estado estado-rojo" id="panelEstado">
+                <span class="estado-icono" id="iconoEstado"
+                      aria-hidden="true">✋</span>
+
+                <div>
+                    <h3 id="tituloEstado">NO CRUZAR</h3>
+                    <p id="mensajeEstado">
+                        Espera en la acera hasta que la señal cambie.
+                    </p>
+                </div>
+            </div>
+
+            <div class="voz-panel">
+                <span class="voz-icono" aria-hidden="true">🔊</span>
+                <div>
+                    <h3>Asistente de voz</h3>
+                    <p id="textoVoz">La voz está preparada.</p>
+                </div>
+            </div>
+
+            <p class="instruccion">
+                El semáforo comunicará cada cambio mediante voz y sonido.
+            </p>
+
+            <div class="controles">
+                <button class="boton boton-principal" id="btnCambiar"
+                        type="button">
+                    ↔ Cambiar señal
+                </button>
+
+                <button class="boton boton-secundario" id="btnSonido"
+                        type="button" aria-pressed="true">
+                    <span id="iconoSonido">🔊</span>
+                    <span id="textoSonido">Sonido activado</span>
+                </button>
+
+                <button class="boton boton-secundario" id="btnVoz"
+                        type="button" aria-pressed="true">
+                    🗣️ <span id="textoBotonVoz">Voz activada</span>
+                </button>
+
+                <button class="boton boton-secundario" id="btnAutomatico"
+                        type="button" aria-pressed="false">
+                    ▶ <span id="textoAutomatico">Iniciar automático</span>
+                </button>
+            </div>
+
+            <p class="anuncio-accesible" id="anuncio"
+               role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+
+        <section class="caracteristicas">
+            <article class="tarjeta">
+                <div class="tarjeta-icono rojo">✋</div>
+                <h3>Señal visual</h3>
+                <p>La luz roja indica que debes esperar antes de cruzar.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="tarjeta-icono azul">🔊</div>
+                <h3>Señal auditiva</h3>
+                <p>La voz comunica el estado del semáforo en cada cambio.</p>
+            </article>
+
+            <article class="tarjeta">
+                <div class="tarjeta-icono verde">♿</div>
+                <h3>Accesibilidad</h3>
+                <p>Incluye instrucciones escritas, voz y controles accesibles.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Proyecto educativo · HTML, CSS y JavaScript</p>
+            <p>La tecnología puede ayudar a construir espacios más inclusivos.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
